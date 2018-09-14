@@ -66,26 +66,15 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                    Publicaciones
+                    Appointment
                 </div>
 
                 <div class="links">
-                    @foreach($posts as $post)
-                        <a href="posts/{{ $post->id }}">
-                            {{ $post->title  }}
+                    @foreach($appointment as $hours)
+                        <a href="appointment/{{ $hours->id }}">
+                            {{ $hours->contact  }}
                         </a>
                         @endforeach
                 </div>

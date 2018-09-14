@@ -3,19 +3,19 @@
 namespace App\Repositories;
 use GuzzleHttp\Client;
 
-class Posts{
+class Appointment{
 
     public function all(){
-        return $this->get('posts');
+        return $this->get('appointment');
     }
 
     public function find($id){
-        return $this->get("posts/{$id}");
+        return $this->get("appointment/{$id}");
     }
 
     public function get($url){
         $client = new Client([
-            'base_uri' => 'http://localhost:8000/api/v1/posts',
+            'base_uri' => 'http://localhost:8000/api/v1/appointment',
             'timeout'  => 2.0,
             'verify' => false,
         ]);

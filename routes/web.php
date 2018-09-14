@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','PostController@index');
+Route::get('/','AppointmentController@index');
 
-Route::get('posts/{id}','PostController@show');
+Route::get('appointment/{id}','AppointmentController@show');
 
