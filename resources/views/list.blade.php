@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <style>
         html, body {
             background-color: #fff;
@@ -70,14 +71,18 @@
         <div class="title m-b-md">
             {{ $appointment->contact }}
         </div>
-        <div class="links">
-             {{ $appointment->date  }}
-        </div>
-        <div class="links">
-            {{ $appointment->start_time  }}
-        </div>
-        <div class="links">
-            {{ $appointment->finish_time  }}
+        <table class="table table-stripedd">
+            <tr class="title">
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>Finish time</th>
+            </tr>
+            <tr class="title">
+                <td>{{ $appointment->date  }}</td>
+                <td>{{ $appointment->start_time  }}</td>
+                <td>{{ $appointment->finish_time  }}</td>
+            </tr>
+        </table>
         </div>
     </div>
 </div>
