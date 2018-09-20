@@ -15,6 +15,7 @@ Laravel Client, is an application that consumes a RESTful API
 
 * sudo git clone https://github.com/nmardones/client
 * composer update
+* php artisan key:generate
 * php artisan serve --port=9000
 
 ## About me!
